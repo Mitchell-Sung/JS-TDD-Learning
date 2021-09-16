@@ -1,4 +1,5 @@
 node_modules
-
 note.txt
 
+# 특정한 파일을 업로드를 하지 않기를 원한다면, 
+  $ git rm --cached filename
