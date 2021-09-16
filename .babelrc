@@ -1,0 +1,4 @@
+// ES6 Code trans files
+{
+	"presets": ["@babel/preset-env"]
+}
