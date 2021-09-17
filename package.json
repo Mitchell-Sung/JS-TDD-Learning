@@ -18,10 +18,17 @@
 	},
 	"homepage": "https://github.com/Mitchell-Sung/JS-TDD-Learning#readme",
 	"devDependencies": {
+		"@babel/cli": "^7.15.4",
 		"@babel/core": "^7.15.5",
+		"@babel/node": "^7.15.4",
 		"@babel/preset-env": "^7.15.6",
 		"@babel/register": "^7.15.3",
+		"babel-plugin-lodash": "^3.3.4",
 		"chai": "^4.3.4",
 		"mocha": "^9.1.1"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21",
+		"lodash-node": "^3.10.2"
 	}
 }

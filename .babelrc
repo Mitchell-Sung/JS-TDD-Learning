@@ -1,4 +1,5 @@
 // ES6 Code trans files
 {
+	"plugins": ["lodash"],
 	"presets": ["@babel/preset-env"]
 }
