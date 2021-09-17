@@ -26,7 +26,3 @@ describe('isAnagram - basic functionality', () => {
 		expect(actual).to.equal(expected);
 	});
 });
-
-// 'listens' 'silent' NOT anagrams
-// 'conversation' 'voices rant on' ARE anagrams
-// 'STATE' 'taste' ARE anagrams
