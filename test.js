@@ -1,18 +1,36 @@
-import { isEqual } from 'lodash';
-import getLetterCount from './src/unit-tests/letter-count.js';
+// import { MongoClient } from 'mongodb';
+const mongo = require('mongodb');
+const MongoClient = mongo.MongoClient;
+// import { expect } from 'chai';
+// import getUserByUsername from './getUserByUsername.js';
 
-const isAnagram = (string1, string2) => {
-	const string1LetterCount = getLetterCount(string1);
-	const string2LetterCount = getLetterCount(string2);
+// describe('getUserByUsername', () => {
+// 	it('get the correct user from the database given a username', async () => {
+// 		const client = await MongoClient.connect(
+// 			'mongodb://localhost:27017/TEST_DB',
+// 			{
+// 				useNewUrlParser: true,
+// 				useUnifiedTopology: true,
+// 			}
+// 		);
+// 		const database = client.db('TEST_DB');
+// 		client.close();
+// 	});
+// });
 
-	console.log(`string1LetterCount`, string1LetterCount);
-	console.log(`string2LetterCount`, string2LetterCount);
+const connectDB = async () => {
+	const client = await MongoClient.connect(
+		'mongodb://localhost:27017/TEST_DB',
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+		}
+	);
 
-	const result = isEqual(string1LetterCount, string2LetterCount);
-
-	console.log(`result`, result);
-
-	return result;
+	console.log(`client`, client);
+	const database = client.db('TEST_DB');
+	console.log(`database`, database);
+	client.close();
 };
 
-isAnagram('listens', 'silent');
+connectDB();
